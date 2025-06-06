@@ -1,91 +1,32 @@
-# 氣味圖書館網站使用說明
+# 氣味圖書館網站仿製專案
 
-## 頁面導航欄和頁腳設置指南
+## 專案簡介
+本專案是仿照「氣味圖書館」網站設計的電子商務平台。氣味圖書館是一個專門販售香水、香氛產品的知名品牌，本網站模仿其風格和功能，提供線上香氛產品購物體驗。
 
-為了確保網站風格一致性並簡化維護工作，我們使用了共用的header.php和footer.php元件文件。以下是如何在您的頁面中使用這些元件的指南：
+### 🔑 主要功能
+- 會員系統（註冊、登入、修改密碼）
+- 商品瀏覽與搜尋
+- 購物車功能
+- 商品結帳流程
+- 個人訂單查詢
+- 關於我們頁面
 
-### 使用共用元件的基本步驟
+## 🛠 使用技術
+- **後端**: PHP
+- **資料庫**: MySQL
+- **前端框架**: Bootstrap
+- **其他**: HTML5, CSS3, JavaScript
 
-在您的PHP頁面中，使用以下結構：
+## 🚀 線上體驗
+👉 [點此前往網站首頁](https://php-web.infinityfreeapp.com/homepage%E9%A6%96%E9%A0%81.php)
 
-```php
-<?php 
-// 設置頁面標題
-$pageTitle = '您的頁面標題';
+> 註：若首頁未能正常顯示，請檢查是否跳轉失敗，可手動訪問上方連結。
 
-// 如果需要添加頁面特定的樣式
-$additionalStyles = '
-    /* 在這裡添加您的CSS樣式 */
-    .your-css-class {
-        property: value;
-    }
-';
+## ⚙️ 安裝與設定
+1. 將專案檔案複製到網頁伺服器的根目錄下（例如：XAMPP 的 `htdocs` 資料夾）
+2. 使用 phpMyAdmin 匯入資料庫結構檔案（如 `database.sql`）
+3. 設定資料庫連線參數（`connect.php` 或 `conn.php`）根據您的伺服器資訊進行調整
 
-// 如果需要添加頁面特定的JavaScript
-$additionalHead = '
-    <script>
-        // 您的JavaScript代碼
-        $(document).ready(function(){
-            // ...
-        });
-    </script>
-';
-
-// 引入頭部文件
-require_once('header.php'); 
-?>
-
-<!-- 您的頁面內容 -->
-<div class="container">
-    <!-- 頁面主要內容 -->
-</div>
-
-<?php 
-// 引入頁腳文件
-require_once('footer.php'); 
-?>
-```
-
-### 重要變量
-
-以下是您可以在引入header.php之前設置的變量：
-
-1. `$pageTitle` - 設置頁面的標題
-2. `$additionalStyles` - 添加頁面特定的CSS樣式
-3. `$additionalHead` - 添加頁面特定的JavaScript或其他head元素
-
-### 結帳成功訊息
-
-如果需要顯示結帳成功訊息，您可以使用以下參數：
-
-```php
-// 通過URL參數
-header("Location: homepage首頁.php?checkout_success=true");
-
-// 或通過SESSION變量
-$_SESSION['checkout_success'] = true;
-header("Location: homepage首頁.php");
-```
-
-### 購物車功能
-
-購物車功能完全整合在導航欄中，無需額外設置。確保在checkout_process.php中處理庫存扣減。
-
-### 對現有頁面的修改
-
-1. 移除所有頁面中的HTML頭部、導航欄和頁腳部分
-2. 添加頁面標題和其他必要變量
-3. 使用require_once引入header.php和footer.php
-
-### 文件說明
-
-- `header.php`: 包含網站頭部、導航欄及基本樣式
-- `footer.php`: 包含網站頁腳
-
-### 注意事項
-
-- 確保所有頁面都使用共用元件
-- 如果需要特定頁面的樣式或腳本，使用上述變量而非直接嵌入
-- 在移動任何元素之前，確保了解其在導航結構中的作用
-
-如有任何問題或需要添加新功能，請聯繫網站維護團隊。 
+## 📌 注意事項
+- 本專案僅供學術與學習用途，請勿用於商業目的
+- 請勿在公開平台暴露資料庫帳號與密碼
