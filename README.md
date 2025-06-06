@@ -14,7 +14,7 @@
 ## 🛠 使用技術
 - **後端**: PHP
 - **資料庫**: MySQL
-- **前端框架**: Bootstrap
+- **前端框架**: Bootstrap 3（具備 RWD 響應式設計）
 - **其他**: HTML5, CSS3, JavaScript
 
 ## 🚀 線上體驗
