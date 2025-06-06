@@ -18,7 +18,7 @@
 - **其他**: HTML5, CSS3, JavaScript
 
 ## 🚀 線上體驗
-👉 [點此前往網站首頁](https://php-web.infinityfreeapp.com/homepage%E9%A6%96%E9%A0%81.php)
+👉 [點此前往網站體驗](https://php-web.infinityfreeapp.com/homepage%E9%A6%96%E9%A0%81.php)
 
 > 註：若首頁未能正常顯示，請檢查是否跳轉失敗，可手動訪問上方連結。
 
